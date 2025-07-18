@@ -1,0 +1,35 @@
+def account_blnce(pin,account_balance,x):
+    if pin==x:
+        print(f'you have {account_balance} in your account.')
+    else:
+        print('you have entered wrong pin.')
+def cash_withdrwl(pin,account_balance,x,cash_withdrawal):
+    if pin == x:
+        if cash_withdrawal <= account_balance:
+            print(f'collect you cash')
+        else:
+            print('you do not sufficient funds')
+    else:
+        print('you have entered wrong pin')
+
+def cash_deposit(account_details,account_number):
+    if account_details==account_number:
+        n2000=int(input('Enter the number of 2000 Rs notes:'))
+        n500=int(input('Enter the number of 500 Rs notes:'))
+        n200=int(input('Enter the number of 200 Rs notes:'))
+        n100=int(input('Enter the number of 100 Rs notes:'))
+        cash_deposit=(n2000*2000) + (n500*500) + (n200*200) + (n100*100)
+        print(f' you have deposited Rs. {cash_deposit} in your account')
+    else:
+         print('you have entered wrong account number')
+def pin_change(pin,x):
+    if pin == x:
+        n_pin=input('enter new pin:')
+        re_n_pin=input('re enter new pin:')
+        if n_pin==re_n_pin:
+            pin=pin.replace(n_pin,pin)
+            print('you have successfully changed your pin')
+        else:
+            print('pins do not match')
+    else:
+        print('you have entered wrong pin')
